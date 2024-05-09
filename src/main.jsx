@@ -5,12 +5,12 @@ import * as ReactDOM from 'react-dom/client'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import Login from './pages/auth/Login'
+import Auth from './pages/auth/auth'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Login />
+    element: <Auth />
   }
 ])
 
