@@ -1,5 +1,6 @@
-const Login = () => {
+import { Link } from "react-router-dom";
 
+const Login = () => {
   return (
     <div className="bg-slate-800 bg-opacity-50 rounded-b-2xl">
       <form className="py-7" action="submit">
@@ -19,9 +20,14 @@ const Login = () => {
             name="user-password"
             placeholder="Password"
           />
-          <button type="button" className="tracking-wider rounded-2xl px-16 py-2 border-2 my-16 text-2xl hover:bg-slate-500 transition-colors text-white bg-opacity-50 border-orange-400">
-            sign in
-          </button>
+          <Link to={"subject"}>
+            <button
+              type="button"
+              className="tracking-wider rounded-2xl px-16 py-2 border-2 my-16 text-2xl hover:bg-slate-500 transition-colors text-white bg-opacity-50 border-orange-400"
+            >
+              sign in
+            </button>
+          </Link>
         </div>
       </form>
     </div>

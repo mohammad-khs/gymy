@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SignUp = () => {
   return (
     <>
@@ -26,18 +28,20 @@ const SignUp = () => {
               placeholder="Password"
             />
             <div className="w-80 mt-2">
-              <input type="checkbox" name="remind-me" />
+              <input type="checkbox" id="remind-me" name="remind-me" />
               <label for="remind-me" className="text-white text-xl">
                 {" "}
                 Remind me
               </label>
             </div>
-            <button
-              type="button"
-              className="tracking-wider rounded-2xl px-16 py-2 border-2 my-16 text-2xl hover:bg-slate-500 transition-colors text-white bg-opacity-50 border-orange-400"
-            >
-              sign up
-            </button>
+            <Link to={'subject'}>
+              <button
+                type="button"
+                className="tracking-wider rounded-2xl px-16 py-2 border-2 my-16 text-2xl hover:bg-slate-500 transition-colors text-white bg-opacity-50 border-orange-400"
+              >
+                sign up
+              </button>
+            </Link>
           </div>
         </form>
       </div>
