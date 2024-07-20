@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
+
   return (
     <>
       <div className="bg-slate-800 bg-opacity-50 rounded-b-2xl">
@@ -29,12 +31,12 @@ const SignUp = () => {
             />
             <div className="w-80 mt-2">
               <input type="checkbox" id="remind-me" name="remind-me" />
-              <label for="remind-me" className="text-white text-xl">
+              <label htmlFor="remind-me" className="text-white text-xl">
                 {" "}
                 Remind me
               </label>
             </div>
-            <Link to={'subject'}>
+            <Link to={"subject"}>
               <button
                 type="button"
                 className="tracking-wider rounded-2xl px-16 py-2 border-2 my-16 text-2xl hover:bg-slate-500 transition-colors text-white bg-opacity-50 border-orange-400"

@@ -4,6 +4,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 const CustomParticles = () => {
+
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -21,9 +22,7 @@ const CustomParticles = () => {
   const options = useMemo(
     () => ({
       background: {
-        color: {
-          
-        },
+        color: {},
       },
       fpsLimit: 120,
       interactivity: {
@@ -49,31 +48,33 @@ const CustomParticles = () => {
       },
       particles: {
         color: {
-          value: [
-            "#313131",
-          ],
+          value: ["#313131"],
         },
         links: {
           color: "#7f8782",
-          distance:100,
+          distance: 100,
           enable: true,
           opacity: 0.5,
           width: 1,
           triangles: {
             enable: true,
             color: "#ed8936",
-            opacity: 0.1
-          }
+            opacity: 0.1,
+          },
         },
         move: {
-          direction: "none",
           enable: true,
-          outModes: {
-            default: "bounce",
-          },
+          speed: 5,
+          direction: "none",
           random: false,
-          speed: .5,
           straight: false,
+          outMode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
         },
         number: {
           density: {
@@ -88,12 +89,12 @@ const CustomParticles = () => {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 2, max: 3 },
         },
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
   if (init) {
@@ -109,4 +110,4 @@ const CustomParticles = () => {
   return <></>;
 };
 
-export default CustomParticles
+export default CustomParticles;
