@@ -1,10 +1,18 @@
-import TopBottomFog from "../topBottomFog";
+import TopBottomFog from "../../common_components/topBottomFog";
 import FullBody from "../../../assets/fullBody.jpg";
 import TargetZoneButton from "./targetZoneButton";
 import { useState } from "react";
-import NextStep from "./nextStep";
+import NextStep from "../../common_components/nextStep";
+import QuestionLayOut from "../../common_components/questionLayOut";
 const TargetZones = () => {
   const [allBody, setAllBody] = useState(false);
+  const [targetZones, setTargetZones] = useState([
+    "Breasts",
+    "Arms",
+    "Belly",
+    "Butt",
+    "Legs",
+  ]);
   return (
     <>
       <TopBottomFog />
@@ -18,16 +26,14 @@ const TargetZones = () => {
               boxShadow: "0px 0px 100px 100px #ffffff",
             }}
           >
-            <div className="text-4xl text-center p-10 mb-24 font-bold tracking-wider">
-              What is your dream body?
-            </div>
+            <QuestionLayOut questionText={"What are your target zones?"} />
             <div className="flex flex-row">
               <div className="flex flex-col justify-around">
-                <TargetZoneButton name={"Breasts"} allBody={allBody} />
-                <TargetZoneButton name={"Arms"} allBody={allBody} />
-                <TargetZoneButton name={"Belly"} allBody={allBody} />
-                <TargetZoneButton name={"Butt"} allBody={allBody} />
-                <TargetZoneButton name={"Legs"} allBody={allBody} />
+                {targetZones.map((targetZone) => {
+                  return (
+                    <TargetZoneButton name={targetZone} allBody={allBody} />
+                  );
+                })}
               </div>
               <div className="">
                 <img src={FullBody} width={400} alt="full-body" className="" />

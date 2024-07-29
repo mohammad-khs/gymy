@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Login from "./Login";
 import SignUp from "./signUp";
-import CustomParticles from "../customParticles";
+
 const Auth = () => {
   let [isLogin, setIsLogin] = useState(false);
 

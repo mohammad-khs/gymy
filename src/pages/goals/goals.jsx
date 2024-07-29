@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import TopProgressBar from "../topProgressBar";
-import TopBottomFog from "./topBottomFog";
+import TopProgressBar from "../common_components/topProgressBar";
+import TopBottomFog from "../common_components/topBottomFog";
+import Continue from "../common_components/continue";
 
 const Goals = () => {
   return (
@@ -25,13 +26,8 @@ const Goals = () => {
             <div className="text-2xl mb-10">
               that works with, not agianst, your life style
             </div>
-            <Link to={"/goals/mainGoal"}>
-              <button
-                type="button"
-                className="tracking-wider rounded-2xl  px-16 py-2 border-2 mt-28 text-2xl bg-mehranaGray transition-colors hover:bg-mehranaOrange hover:border-mehranaGray text-white  border-mehranaOrange"
-              >
-                Continue
-              </button>
+            <Link className="mt-28" to={"/goals/mainGoal"}>
+              <Continue />
             </Link>
           </div>
         </div>

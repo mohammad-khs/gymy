@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import TopProgressBar from "../topProgressBar";
-import TopBottomFog from "../goals/topBottomFog";
+import TopProgressBar from "../common_components/topProgressBar";
+import TopBottomFog from "../common_components/topBottomFog";
+import Continue from "../common_components/continue";
 
 const Fitness = () => {
   return (
@@ -25,13 +26,8 @@ const Fitness = () => {
             <div className="text-2xl mb-10">
               Are you friends with fitness? lets find out
             </div>
-            <Link to={"/"}>
-              <button
-                type="button"
-                className="tracking-wider rounded-2xl  px-16 py-2 border-2 mt-28 text-2xl bg-mehranaGray transition-colors hover:bg-mehranaOrange hover:border-mehranaGray text-white  border-mehranaOrange"
-              >
-                Continue
-              </button>
+            <Link className="mt-28" to={"/fitness/triedMethodsToLW"}>
+              <Continue />
             </Link>
           </div>
         </div>

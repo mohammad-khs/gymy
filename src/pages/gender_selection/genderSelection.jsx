@@ -1,12 +1,10 @@
-import CustomParticles from "../customParticles";
 import Gender from "./gender";
 import male from "../../assets/male.png";
 import female from "../../assets/female.png";
-import VerticalFog from "./verticalFog";
+import VerticalFog from "../common_components/verticalFog";
 const GenderSelection = () => {
   return (
     <>
-      
       <VerticalFog />
       <div className=" h-screen justify-center items-center flex">
         <div
