@@ -4,6 +4,7 @@ import TargetZoneButton from "./targetZoneButton";
 import { useState } from "react";
 import NextStep from "../../common_components/nextStep";
 import QuestionLayOut from "../../common_components/questionLayOut";
+import BottomProgressBars from "../../common_components/bottom_progress_bars/bottomProgressBars";
 const TargetZones = () => {
   const [allBody, setAllBody] = useState(false);
   const [targetZones, setTargetZones] = useState([
@@ -21,17 +22,21 @@ const TargetZones = () => {
           <div
             className="flex flex-col justify-center items-center bg-white"
             style={{
-              webkitBoxShadow: "0px 0px 100px 100px #ffffff",
-              mozBoxShadow: "0px 0px 100px 100px #ffffff",
+              WebkitBoxShadow: "0px 0px 100px 100px #ffffff",
+              MozBoxShadow: "0px 0px 100px 100px #ffffff",
               boxShadow: "0px 0px 100px 100px #ffffff",
             }}
           >
             <QuestionLayOut questionText={"What are your target zones?"} />
             <div className="flex flex-row">
               <div className="flex flex-col justify-around">
-                {targetZones.map((targetZone) => {
+                {targetZones.map((targetZone, index) => {
                   return (
-                    <TargetZoneButton name={targetZone} allBody={allBody} />
+                    <TargetZoneButton
+                      name={targetZone}
+                      allBody={allBody}
+                      key={index}
+                    />
                   );
                 })}
               </div>
@@ -57,6 +62,8 @@ const TargetZones = () => {
             </div>
             <NextStep toWhere={"/goals/whatToImprove"} />
           </div>
+
+          <BottomProgressBars goalValue={4} />
         </div>
       </div>
     </>

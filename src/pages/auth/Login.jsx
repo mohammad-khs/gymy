@@ -13,12 +13,14 @@ const Login = () => {
             type="email"
             name="user-email"
             placeholder="E-mail"
+            autoComplete="email"
           />
           <input
             className="my-5 w-80 h-12 rounded-b-3xl py-3 text-xl px-4"
             type="password"
             name="user-password"
             placeholder="Password"
+            autoComplete="current-password"
           />
           <Link className="my-16" to={"genderSelection"}>
             <button

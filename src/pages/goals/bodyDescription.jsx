@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import GoalChoiceLayout from "./goalChoiceLayout";
 import { useState } from "react";
 import QuestionLayOut from "../common_components/questionLayOut";
+import BottomProgressBars from "../common_components/bottom_progress_bars/bottomProgressBars";
 const BodyDescription = () => {
   const [bodyDescription, setBodyDescription] = useState([
     { goalName: "slim", goalImg: Slim },
@@ -22,16 +23,13 @@ const BodyDescription = () => {
           <QuestionLayOut questionText={"How would you describe your body?"} />
           {bodyDescription.map((goal, index) => {
             return (
-              <Link to={"/goals/dreamBody"}>
-                <GoalChoiceLayout
-                  goal={goal.goalName}
-                  img={goal.goalImg}
-                  key={index}
-                />
+              <Link to={"/goals/dreamBody"} key={index}>
+                <GoalChoiceLayout goal={goal.goalName} img={goal.goalImg} />
               </Link>
             );
           })}
         </div>
+        <BottomProgressBars goalValue={2} />
       </div>
     </>
   );

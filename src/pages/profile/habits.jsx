@@ -5,14 +5,14 @@ import NextStep from "../common_components/nextStep";
 import ChoiceInputLO from "../common_components/choiceInputLO";
 import BottomProgressBars from "../common_components/bottom_progress_bars/bottomProgressBars";
 
-const TriedMethodsToLW = () => {
+const Habits = () => {
   const [mehtodsToLW, setMethodsToLW] = useState([
-    "Diets",
-    "Home workouts",
-    "Gym workouts",
-    "Food supplements",
-    "Fitness apps",
-    "None",
+    "I eat late at night",
+    "I can't give up eating sweets",
+    "I love soft drinks",
+    "I consume hard drinks sometimes",
+    "I love fatty or salty food",
+    "None of the above",
   ]);
   return (
     <>
@@ -20,23 +20,19 @@ const TriedMethodsToLW = () => {
       <div className="h-screen flex-col flex justify-center align-middle items-center">
         <div className="w-2/5">
           <QuestionLayOut
-            questionText={"What methods have you tried to lose weight?"}
+            questionText={"Do you have any of the following habits?"}
           />
           {mehtodsToLW.map((method, index) => {
             return (
-              <ChoiceInputLO
-                ChoiceText={method}
-                index={index}
-                key={index}
-              />
+              <ChoiceInputLO ChoiceText={method} index={index} key={index} />
             );
           })}
         </div>
-        <NextStep toWhere={"/fitness/exerciseXP"} />
-        <BottomProgressBars fitnessValue={1} />
+        <NextStep toWhere={"/profile/sideActivities"} />
+        <BottomProgressBars profileValue={4} />
       </div>
     </>
   );
 };
 
-export default TriedMethodsToLW;
+export default Habits;

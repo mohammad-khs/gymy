@@ -5,6 +5,7 @@ import QuestionLayOut from "../common_components/questionLayOut";
 import GoalChoiceLayout from "../goals/goalChoiceLayout";
 import { Link } from "react-router-dom";
 import ChoiceInputLO from "../common_components/choiceInputLO";
+import BottomProgressBars from "../common_components/bottom_progress_bars/bottomProgressBars";
 
 const FeelUnmotivated = () => {
   const [ReasonList, setReasonList] = useState([
@@ -28,6 +29,7 @@ const FeelUnmotivated = () => {
           })}
         </div>
         <NextStep toWhere={"/fitness/workoutTypes"} />
+        <BottomProgressBars fitnessValue={4} />
       </div>
     </>
   );

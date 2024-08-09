@@ -7,6 +7,7 @@ import Toned from "../../assets/toned.png";
 import ImOkBody from "../../assets/imOkBody.png";
 import { useState } from "react";
 import QuestionLayOut from "../common_components/questionLayOut";
+import BottomProgressBars from "../common_components/bottom_progress_bars/bottomProgressBars";
 const DreamBody = () => {
   const [dreamBodyList, setDreamBodyList] = useState([
     { dreamName: "Thin", dreamImg: Thin },
@@ -23,16 +24,13 @@ const DreamBody = () => {
           <QuestionLayOut questionText={"What is your dream body?"} />
           {dreamBodyList.map((dream, index) => {
             return (
-              <Link to={"/goals/targetZones"}>
-                <GoalChoiceLayout
-                  goal={dream.dreamName}
-                  img={dream.dreamImg}
-                  key={index}
-                />
+              <Link to={"/goals/targetZones"} key={index}>
+                <GoalChoiceLayout goal={dream.dreamName} img={dream.dreamImg} />
               </Link>
             );
           })}
         </div>
+        <BottomProgressBars goalValue={3} />
       </div>
     </>
   );

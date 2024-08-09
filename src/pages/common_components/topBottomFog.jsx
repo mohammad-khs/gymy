@@ -5,17 +5,17 @@ const TopBottomFog = () => {
         <div
           className="bg-white h-1/5 w-full"
           style={{
-            webkitBoxShadow: "1px 100px 100px #ffffff",
-            mozBoxShadow: "1px 100px 100px #ffffff",
             boxShadow: "1px 100px 100px #ffffff",
+            MozBoxShadow: "1px 100px 100px #ffffff",
+            WebkitBoxShadow: "1px 100px 100px #ffffff",
           }}
         ></div>
         <div
           className="bg-white h-1/5 w-full"
           style={{
-            webkitBoxShadow: "1px -100px 100px #ffffff",
-            mozBoxShadow: "1px -100px 100px #ffffff",
             boxShadow: "1px -100px 100px #ffffff",
+            MozBoxShadow: "1px -100px 100px #ffffff",
+            WebkitBoxShadow: "1px -100px 100px #ffffff",
           }}
         ></div>
       </div>

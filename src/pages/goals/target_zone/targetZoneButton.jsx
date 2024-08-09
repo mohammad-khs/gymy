@@ -9,7 +9,6 @@ const TargetZoneButton = ({ name, allBody }) => {
       setColored((color) => (color = false));
     }
   }, [allBody]);
-  console.log(colored);
   return (
     <>
       <button

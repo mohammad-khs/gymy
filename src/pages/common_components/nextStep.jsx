@@ -1,13 +1,23 @@
 import { Link } from "react-router-dom";
 
-const NextStep = ({ toWhere }) => {
+const NextStep = ({ toWhere, valid }) => {
+  if (valid === undefined) {
+    valid = true;
+  }
   return (
     <>
-      <Link to={toWhere} className="z-10 m-8">
-        <button className="text-white bg-mehranaDarkGray text-2xl py-2 px-8 rounded-xl hover:bg-mehranaOrange transition-colors">
-          Next step
-        </button>
-      </Link>
+      <button
+        type="submit"
+        className="z-10 m-8 text-white bg-mehranaDarkGray text-2xl rounded-xl hover:bg-mehranaOrange transition-colors"
+      >
+        {valid ? (
+          <Link className="block py-2 px-8" to={toWhere}>
+            Next step
+          </Link>
+        ) : (
+          <div className=" py-2 px-8">Next step</div>
+        )}
+      </button>
     </>
   );
 };

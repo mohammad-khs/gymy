@@ -3,6 +3,7 @@ import DiagnalFog from "../../common_components/diagnalFog";
 import NextStep from "../../common_components/nextStep";
 import ImproveButton from "./improveButton";
 import QuestionLayOut from "../../common_components/questionLayOut";
+import BottomProgressBars from "../../common_components/bottom_progress_bars/bottomProgressBars";
 
 const WhatToImprove = () => {
   const [imporveOptions, setImporveOptions] = useState([
@@ -31,6 +32,7 @@ const WhatToImprove = () => {
             <NextStep toWhere={"/fitness"} />
           </div>
         </div>
+        <BottomProgressBars goalValue={5} />
       </div>
     </>
   );

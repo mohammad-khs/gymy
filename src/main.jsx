@@ -27,6 +27,21 @@ import ExerciseRoutine from "./pages/fitness/exerciseRoutine";
 import FeelUnmotivated from "./pages/fitness/feelUnmotivated";
 import WorkoutTypes from "./pages/fitness/workoutTypes";
 import RestorativePlans from "./pages/fitness/restorativePlans";
+import WorkoutDays from "./pages/fitness/workoutDays";
+import Profile from "./pages/profile/profile";
+import TypicalDay from "./pages/profile/typicalDay";
+import MealPreferences from "./pages/profile/mealPreferences";
+import MealsADay from "./pages/profile/mealsADay";
+import Habits from "./pages/profile/habits";
+import YourAge from "./pages/profile/yourAge";
+import SideActivities from "./pages/profile/sideActivities";
+import YourHeight from "./pages/profile/yourHeight";
+import YourWeight from "./pages/profile/yourWeight";
+import HealthCycle from "./pages/healthCycle/healthCycle";
+import MenstrualCycle from "./pages/healthCycle/menstrualCycle";
+import PeriodDuration from "./pages/healthCycle/periodDuration";
+import MenstrualCycleDuration from "./pages/healthCycle/menstrualCycleDuration";
+import EffectsOnActivity from "./pages/healthCycle/effectsOnActivity";
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
@@ -74,8 +89,29 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="feelUnmotivated" element={<FeelUnmotivated />} />
           <Route path="workoutTypes" element={<WorkoutTypes />} />
           <Route path="restorativePlans" element={<RestorativePlans />} />
+          <Route path="workoutDays" element={<WorkoutDays />} />
+        </Route>
+        <Route path="profile">
+          <Route index element={<Profile />} />
+          <Route path="typicalDay" element={<TypicalDay />} />
+          <Route path="mealPreferences" element={<MealPreferences />} />
+          <Route path="mealsADay" element={<MealsADay />} />
+          <Route path="habits" element={<Habits />} />
+          <Route path="sideActivities" element={<SideActivities />} />
+          <Route path="yourAge" element={<YourAge />} />
+          <Route path="yourHeight" element={<YourHeight />} />
+          <Route path="yourWeight" element={<YourWeight />} />
+
+        </Route>
+        <Route path="healthCycle">
+          <Route index element={<HealthCycle />} />
+          <Route path="menstrualCycle" element={<MenstrualCycle />} />
+          <Route path="periodDuration" element={<PeriodDuration />} />
+          <Route path="menstrualCycleDuration" element={<MenstrualCycleDuration />} />
+          <Route path="effectsOnActivity" element={<EffectsOnActivity />} />
         </Route>
       </Routes>
+
       {/* <RouterProvider router={router} /> */}
     </React.StrictMode>
   </BrowserRouter>

@@ -3,6 +3,7 @@ import DiagnalFog from "../common_components/diagnalFog";
 import QuestionLayOut from "../common_components/questionLayOut";
 import GoalChoiceLayout from "../goals/goalChoiceLayout";
 import { Link } from "react-router-dom";
+import BottomProgressBars from "../common_components/bottom_progress_bars/bottomProgressBars";
 
 const ExerciseXP = () => {
   const [durationList, setDurationList] = useState([
@@ -23,12 +24,13 @@ const ExerciseXP = () => {
           />
           {durationList.map((duration, index) => {
             return (
-              <Link to={"/fitness/exerciseRoutine"}>
-                <GoalChoiceLayout goal={duration} thin={true} key={index} />
+              <Link to={"/fitness/exerciseRoutine"} key={index}>
+                <GoalChoiceLayout goal={duration} thin={true} />
               </Link>
             );
           })}
         </div>
+        <BottomProgressBars fitnessValue={2} />
       </div>
     </>
   );

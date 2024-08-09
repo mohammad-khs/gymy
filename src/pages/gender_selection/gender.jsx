@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Gender = ({ imgPath, gender }) => {
   return (
     <>
-      <Link to={"/goals"}>
+      <Link to={"/goals"} >
         <div className="relative">
           <img
             src={imgPath}
@@ -19,8 +19,8 @@ const Gender = ({ imgPath, gender }) => {
               focusable="false"
             >
               <linearGradient id="my-cool-gradient" x2="0" y2="1">
-                <stop offset="0%" stop-color="#ff7d00" />
-                <stop offset="100%" stop-color="#ffe0c3" />
+                <stop offset="0%" stopColor="#ff7d00" />
+                <stop offset="100%" stopColor="#ffe0c3" />
               </linearGradient>
             </svg>
             <svg width="250px" height="250px" viewBox="0 0 24 24">

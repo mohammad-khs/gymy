@@ -6,8 +6,10 @@ const DiagnalFog = () => {
           className="h-full"
           style={{
             zIndex: -1,
-            boxShadow: "0px 0px 200px 40vw #ffffff",
-            transform: "skew(-45deg)"
+            WebKitboxShadow: "0px 0px 200px 35vw #ffffff",
+            MozBoxShadow: "0px 0px 200px 35vw #ffffff",
+            boxShadow: "0px 0px 200px 35vw #ffffff",
+            transform: "skew(-45deg)",
           }}
         ></div>
       </div>

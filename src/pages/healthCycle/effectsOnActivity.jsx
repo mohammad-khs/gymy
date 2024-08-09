@@ -5,31 +5,30 @@ import GoalChoiceLayout from "../goals/goalChoiceLayout";
 import { Link } from "react-router-dom";
 import BottomProgressBars from "../common_components/bottom_progress_bars/bottomProgressBars";
 
-const ExerciseRoutine = () => {
-  const [routineList, setRoutineList] = useState([
-    "Daily",
-    "3-4 times per week",
-    "1-2 times per week",
-    "Every now and then",
+const EffectsOnActivity = () => {
+  const [effections, setEffections] = useState([
+    "Yes, it does!",
+    "No, not really",
+    "it depends",
   ]);
   return (
     <>
       <DiagnalFog />
       <div className="h-screen flex-col flex justify-center align-middle items-center">
         <div className="w-2/5">
-          <QuestionLayOut questionText={"How often do you workout?"} />
-          {routineList.map((routine, index) => {
+          <QuestionLayOut questionText={"Does your cycle usually effect your activity levels?"} />
+          {effections.map((effect, index) => {
             return (
-              <Link to={"/fitness/feelUnmotivated"} key={index}>
-                <GoalChoiceLayout goal={routine} />
+              <Link to={"/healthCycle/periodDuration"} key={index}>
+                <GoalChoiceLayout goal={effect} />
               </Link>
             );
           })}
         </div>
-        <BottomProgressBars fitnessValue={3} />
+        <BottomProgressBars healthValue={4} />
       </div>
     </>
   );
 };
 
-export default ExerciseRoutine;
+export default EffectsOnActivity;

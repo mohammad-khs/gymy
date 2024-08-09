@@ -6,6 +6,7 @@ import ChoiceInputImgLO from "../common_components/choiceInputImgLO";
 import RunninWoman from "../../assets/runningWoman.png";
 import CardioWoman from "../../assets/cardioWoman.png";
 import SquatWoman from "../../assets/squatWoman.png";
+import BottomProgressBars from "../common_components/bottom_progress_bars/bottomProgressBars";
 
 const WorkoutTypes = () => {
   const [workTypeList, setWorkoutTypes] = useState([
@@ -51,6 +52,7 @@ const WorkoutTypes = () => {
           })}
         </div>
         <NextStep toWhere={"/fitness/restorativePlans"} />
+        <BottomProgressBars fitnessValue={5} />
       </div>
     </>
   );
