@@ -19,7 +19,7 @@ const EffectsOnActivity = () => {
           <QuestionLayOut questionText={"Does your cycle usually effect your activity levels?"} />
           {effections.map((effect, index) => {
             return (
-              <Link to={"/healthCycle/periodDuration"} key={index}>
+              <Link to={"/informationAnalyzing"} key={index}>
                 <GoalChoiceLayout goal={effect} />
               </Link>
             );

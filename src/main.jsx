@@ -42,6 +42,7 @@ import MenstrualCycle from "./pages/healthCycle/menstrualCycle";
 import PeriodDuration from "./pages/healthCycle/periodDuration";
 import MenstrualCycleDuration from "./pages/healthCycle/menstrualCycleDuration";
 import EffectsOnActivity from "./pages/healthCycle/effectsOnActivity";
+import InformaitonAnalyzing from "./pages/informationAnalyzing";
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
@@ -110,6 +111,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="menstrualCycleDuration" element={<MenstrualCycleDuration />} />
           <Route path="effectsOnActivity" element={<EffectsOnActivity />} />
         </Route>
+          <Route path="informationAnalyzing" element={<InformaitonAnalyzing />} />
       </Routes>
 
       {/* <RouterProvider router={router} /> */}
